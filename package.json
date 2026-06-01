@@ -58,14 +58,17 @@
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier src test-apps/react-router/app *.ts *.mjs *.json --check",
     "prettier:fix": "prettier src test-apps/react-router/app *.ts *.mjs *.json --write",
-    "format-code": "npm run prettier:fix & npm run lint:fix"
+    "format-code": "npm run prettier:fix & npm run lint:fix",
+    "changeset": "changeset",
+    "changeset:version": "changeset version && npm install --package-lock-only --ignore-scripts",
+    "changeset:publish": "changeset publish"
   },
   "peerDependencies": {
     "react-router": ">=7.9.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/forge-42/remix-toast.git"
+    "url": "git+https://github.com/code-forge-io/remix-toast.git"
   },
   "keywords": [
     "Remix",
@@ -77,14 +80,15 @@
   "author": "Alem Tuzlak",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/forge-42/remix-toast/issues"
+    "url": "https://github.com/code-forge-io/remix-toast/issues"
   },
-  "homepage": "https://github.com/forge-42/remix-toast#readme",
-  "readme": "https://github.com/forge-42/remix-toast#readme",
+  "homepage": "https://github.com/code-forge-io/remix-toast#readme",
+  "readme": "https://github.com/code-forge-io/remix-toast#readme",
   "dependencies": {
     "zod": "^4.0.5"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.31.0",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.34.0",
     "@testing-library/react": "^14.0.0",
